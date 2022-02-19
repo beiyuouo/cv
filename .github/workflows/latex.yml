@@ -17,9 +17,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: beiyuouo/beiyuouo.github.io
+          ref: master
           path: homepage
           token: ${{ secrets.PUBLISH_KEY }}
-          branch: master
 
       - name: Compile CV
         uses: xu-cheng/latex-action@v2

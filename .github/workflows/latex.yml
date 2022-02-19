@@ -31,6 +31,9 @@ jobs:
 
           git clone -b main https://github.com/beiyuouo/beiyuouo.github.io homepage
 
+          cp ${GITHUB_WORKSPACE}/cv_cn/cv_cn.pdf homepage/pdf/cv_cn.pdf
+          cp ${GITHUB_WORKSPACE}/cv_en/cv_en.pdf homepage/pdf/cv_en.pdf
+
       - name: Update CV
         uses: ad-m/github-push-action@master
         with:

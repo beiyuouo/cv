@@ -43,8 +43,7 @@ jobs:
       - name: git-sync
         uses: wei/git-sync@v3
         with:
-          source_repo: "https://github.com/beiyuouo/beiyuouo.github.io.git"
+          source_repo: "https://beiyuouo:${{ secrets.PUBLISH_KEY }}@github.com/beiyuouo/beiyuouo.github.io.git"
           source_branch: "master"
-          destination_repo: "https://github.com/beiyuouo/beiyuouo.github.io.git"
+          destination_repo: "https://beiyuouo:${{ secrets.PUBLISH_KEY }}@github.com/beiyuouo/beiyuouo.github.io.git"
           destination_branch: "master"
-          ssh_private_key: ${{ secrets.PUBLISH_KEY }} # optional

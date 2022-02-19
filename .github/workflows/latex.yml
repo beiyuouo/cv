@@ -31,7 +31,7 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
 
-          git clone -b master https://github.com/beiyuouo/beiyuouo.github.io homepage
+          git clone https://github.com/beiyuouo/beiyuouo.github.io homepage
 
           cp ${GITHUB_WORKSPACE}/cv_cn/cv_cn.pdf homepage/pdf/cv_cn.pdf
           cp ${GITHUB_WORKSPACE}/cv_en/cv_en.pdf homepage/pdf/cv_en.pdf
@@ -40,11 +40,15 @@ jobs:
 
           git status
 
-      - name: Update CV
-        uses: ad-m/github-push-action@master
+      - uses: GuillaumeFalourd/git-commit-push@v1.3
         with:
-          directory: homepage
-          github_token: ${{ secrets.PUBLISH_KEY }}
-          branch: master
+          email: 41898282+github-actions[bot]@users.noreply.github.com
+          name: github-actions[bot]
+          commit_message: "Update CV"
+          target_branch: master
+          files: homepage
+          remote_repository: https://github.com/beiyuouo/beiyuouo.github.io
+          access_token: ${{ secrets.PUBLISH_KEY }}
           force: true
-          repository: "beiyuouo/beiyuouo.github.io"
+          empty: true
+          tags: true

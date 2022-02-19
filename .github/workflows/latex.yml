@@ -1,0 +1,32 @@
+name: LaTex Compile and Push
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+
+      - name: Change directory to the root of the repository
+        run: cd cd $GITHUB_WORKSPACE\cv_en
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: cv_cn.tex
+
+      - name: Change directory to the root of the repository
+        run: cd $GITHUB_WORKSPACE\cv_en
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: cv_en.tex
+
+      - name: Push to main repository
+        run: |
+          ls -l ${GITHUB_WORKSPACE}\cv_cn && ls -l ${GITHUB_WORKSPACE}\cv_en

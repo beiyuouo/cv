@@ -11,24 +11,16 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
 
-      - name: Change directory to the root of the repository
-        run: cd $GITHUB_WORKSPACE/cv_cn
-
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: cv_cn.tex
-          latexmk_use_xelatex: true
-
-      - name: Change directory to the root of the repository
-        run: cd $GITHUB_WORKSPACE/cv_en
-
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: cv_en.tex
+          root_file: |
+            cv_en.tex
+            cv_cn.tex
           latexmk_use_xelatex: true
 
       - name: Push to main repository
         run: |
-          ls -l ${GITHUB_WORKSPACE}/cv_cn && ls -l ${GITHUB_WORKSPACE}/cv_en
+          ls -l ${GITHUB_WORKSPACE}
+          ls -l ${GITHUB_WORKSPACE}/cv_cn
+          ls -l ${GITHUB_WORKSPACE}/cv_en

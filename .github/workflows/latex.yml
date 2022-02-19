@@ -13,6 +13,13 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set up HomePage
+        uses: actions/checkout@v2
+        with:
+          repository: beiyuouo/beiyuouo.github.io
+          path: homepage
+          token: ${{ secrets.PUBLISH_KEY }}
+
       - name: Compile CV
         uses: xu-cheng/latex-action@v2
         with:
@@ -28,10 +35,10 @@ jobs:
           ls -l ${GITHUB_WORKSPACE}/cv_cn
           ls -l ${GITHUB_WORKSPACE}/cv_en
 
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
+          # git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # git config --global user.name "github-actions[bot]"
 
-          git clone https://github.com/beiyuouo/beiyuouo.github.io homepage
+          # git clone https://github.com/beiyuouo/beiyuouo.github.io homepage
 
           cp ${GITHUB_WORKSPACE}/cv_cn/cv_cn.pdf homepage/pdf/cv_cn.pdf
           cp ${GITHUB_WORKSPACE}/cv_en/cv_en.pdf homepage/pdf/cv_en.pdf
@@ -40,4 +47,4 @@ jobs:
 
           git status
 
-          git remote set-url --push origin https://beiyuouo:${{ secrets.PUBLISH_KEY }}@github.com/beiyuouo/beiyuouo.github.io
+          git push origin master

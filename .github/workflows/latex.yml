@@ -19,7 +19,7 @@ jobs:
           repository: beiyuouo/beiyuouo.github.io
           ref: master
           path: homepage
-          token: ${{ secrets.PUBLISH_KEY }}
+          ssh-key: ${{ secrets.PUBLISH_KEY }}
 
       - name: Compile CV
         uses: xu-cheng/latex-action@v2

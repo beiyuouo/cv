@@ -22,14 +22,14 @@ jobs:
           work_in_root_file_dir: true
           latexmk_use_xelatex: true
 
+      - name: Setup GIT user
+        uses: fregante/setup-git-user@v1
+
       - name: Setup repository
         run: |
           ls -l ${GITHUB_WORKSPACE}
           ls -l ${GITHUB_WORKSPACE}/cv_cn
           ls -l ${GITHUB_WORKSPACE}/cv_en
-
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
 
           git clone -b master https://github.com/beiyuouo/beiyuouo.github.io homepage
 

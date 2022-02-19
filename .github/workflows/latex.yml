@@ -36,14 +36,8 @@ jobs:
           cp ${GITHUB_WORKSPACE}/cv_cn/cv_cn.pdf homepage/pdf/cv_cn.pdf
           cp ${GITHUB_WORKSPACE}/cv_en/cv_en.pdf homepage/pdf/cv_en.pdf
 
-          cd homepage && git add . && git commit -m "Update CV"
+          cd homepage && git commit -am "Update CV"
 
           git status
 
-      - name: git-sync
-        uses: wei/git-sync@v3
-        with:
-          source_repo: "https://beiyuouo:${{ secrets.PUBLISH_KEY }}@github.com/beiyuouo/beiyuouo.github.io.git"
-          source_branch: "master"
-          destination_repo: "https://beiyuouo:${{ secrets.PUBLISH_KEY }}@github.com/beiyuouo/beiyuouo.github.io.git"
-          destination_branch: "master"
+          git remote set-url --push origin https://beiyuouo:${{ secrets.PUBLISH_KEY }}@github.com/beiyuouo/beiyuouo.github.io

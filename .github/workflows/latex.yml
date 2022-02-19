@@ -41,3 +41,4 @@ jobs:
           github_token: ${{ secrets.PUBLISH_KEY }}
           branch: master
           force: true
+          repository: beiyuouo/beiyuouo.github.io

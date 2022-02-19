@@ -20,8 +20,21 @@ jobs:
           work_in_root_file_dir: true
           latexmk_use_xelatex: true
 
-      - name: Push to main repository
+      - name: Setup repository
         run: |
           ls -l ${GITHUB_WORKSPACE}
           ls -l ${GITHUB_WORKSPACE}/cv_cn
           ls -l ${GITHUB_WORKSPACE}/cv_en
+
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          git clone -b main https://github.com/beiyuouo/beiyuouo.github.io homepage
+
+      - name: Update CV
+        uses: ad-m/github-push-action@master
+        with:
+          directory: homepage
+          github_token: ${{ secrets.PUBLISH_KEY }}
+          branch: main
+          force: true

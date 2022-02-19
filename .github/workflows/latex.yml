@@ -38,6 +38,8 @@ jobs:
 
           cd homepage && git add . && git commit -m "Update CV"
 
+          git status
+
       - name: Update CV
         uses: ad-m/github-push-action@master
         with:
@@ -45,4 +47,4 @@ jobs:
           github_token: ${{ secrets.PUBLISH_KEY }}
           branch: master
           force: true
-          repository: beiyuouo/beiyuouo.github.io
+          repository: "beiyuouo/beiyuouo.github.io"

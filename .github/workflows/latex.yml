@@ -40,15 +40,11 @@ jobs:
 
           git status
 
-      - uses: GuillaumeFalourd/git-commit-push@v1.3
+      - name: git-sync
+        uses: wei/git-sync@v3
         with:
-          email: 41898282+github-actions[bot]@users.noreply.github.com
-          name: github-actions[bot]
-          commit_message: "Update CV"
-          target_branch: master
-          files: homepage
-          remote_repository: https://github.com/beiyuouo/beiyuouo.github.io
-          access_token: ${{ secrets.PUBLISH_KEY }}
-          force: true
-          empty: true
-          tags: true
+          source_repo: "https://github.com/beiyuouo/beiyuouo.github.io.git"
+          source_branch: "master"
+          destination_repo: "https://github.com/beiyuouo/beiyuouo.github.io.git"
+          destination_branch: "master"
+          ssh_private_key: ${{ secrets.PUBLISH_KEY }} # optional

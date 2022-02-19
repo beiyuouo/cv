@@ -36,10 +36,8 @@ jobs:
           ls -l ${GITHUB_WORKSPACE}/cv_cn
           ls -l ${GITHUB_WORKSPACE}/cv_en
 
-          # git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # git config --global user.name "github-actions[bot]"
-
-          # git clone https://github.com/beiyuouo/beiyuouo.github.io homepage
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
 
           cp ${GITHUB_WORKSPACE}/cv_cn/cv_cn.pdf homepage/pdf/cv_cn.pdf
           cp ${GITHUB_WORKSPACE}/cv_en/cv_en.pdf homepage/pdf/cv_en.pdf

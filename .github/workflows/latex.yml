@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
+        with:
+          persist-credentials: false
 
       - name: Compile CV
         uses: xu-cheng/latex-action@v2
@@ -33,6 +35,8 @@ jobs:
 
           cp ${GITHUB_WORKSPACE}/cv_cn/cv_cn.pdf homepage/pdf/cv_cn.pdf
           cp ${GITHUB_WORKSPACE}/cv_en/cv_en.pdf homepage/pdf/cv_en.pdf
+
+          cd homepage && git add . && git commit -m "Update CV"
 
       - name: Update CV
         uses: ad-m/github-push-action@master

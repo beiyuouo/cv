@@ -213,6 +213,8 @@
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{0.5em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{0.5em}\bodyfont\slshape\color{graytext} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\slshape\color{awesome} #1}}
+\newcommand*{\entrydateblackstyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\slshape\color{graytext} #1}}
+\newcommand*{\entrydateredstyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\slshape\color{awesome} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\upshape\color{text} #1}}
 
 % For elements of publications
@@ -400,12 +402,12 @@
 \newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{3mm}
-\newcommand{\acvHeaderAfterQuoteSkip}{3mm}
+\newcommand{\acvHeaderAfterSocialSkip}{2mm}
+\newcommand{\acvHeaderAfterQuoteSkip}{1mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvSectionTopSkip}{0mm}
+\newcommand{\acvSectionContentTopSkip}{2.0mm}
 
 
 %-------------------------------------------------------------------------------
@@ -627,6 +629,19 @@
     {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+  \end{tabular*}%
+}
+
+% Define an environment for cvproject
+% Usage: \cvproject{<title>}{<link>}{<star>}{<date>}{<description>}
+\newcommand*{\cvproject}[5]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 6.5cm} R{6.5cm}}
+    \ifempty{#3}{\entrytitlestyle{\href{#2}{#1~\large\faGithub\normalsize}} & \entrydateredstyle{#4} \\}
+    {\entrytitlestyle{\href{#2}{#1~\large\faGithub~\small(\faStar#3)}} & \entrydateredstyle{#4} \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
 }

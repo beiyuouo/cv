@@ -634,7 +634,8 @@
 % Define an environment for cvpubliations
 \newenvironment{cvpublications}{%
   \vspace{\acvSectionContentTopSkip}
-  \begin{center}\begin{itemize}[leftmargin=2ex]
+  \vspace{-5.0mm}
+  \begin{center}\begin{itemize}[leftmargin=2ex, itemsep=-3.0pt, topsep=0pt]
     }{%
   \end{itemize}\end{center}
 }

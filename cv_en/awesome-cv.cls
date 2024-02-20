@@ -175,7 +175,7 @@
   UprightFont=*-Light.otf,
   ItalicFont=*-Light.otf,
   BoldFont=*-Medium.otf,
-  BoldItalicFont=*-Medium.otf,
+  BoldItalicFont=*-Bold.otf,
 ]{SourceHanSerifSC}
 
 \newfontfamily\specialbold[
@@ -660,7 +660,7 @@
 \newcommand*{\cvpublication}[5]{%
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \item {\pubstitlestyle{#1} \\ \pubsauthorstyle{#2.} \ifempty{#4}{}{\pubsdatestyle{(#4).} }\textit{\pubsjournalstyle{#3.}}\ifempty{#5}{}{ \pubsdescstyle{#5}}}
+  \item {\pubstitlestyle{#1.}~~\pubsauthorstyle{#2.} \ifempty{#4}{}{\pubsdatestyle{(#4).} }\textit{\pubsjournalstyle{#3.}}\ifempty{#5}{}{ \pubsdescstyle{#5}}}
 }
 
 

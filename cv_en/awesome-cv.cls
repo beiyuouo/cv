@@ -210,12 +210,12 @@
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{0.5em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{0.5em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{0.5em}\bodyfont\slshape\color{graytext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\slshape\color{awesome} #1}}
-\newcommand*{\entrydateblackstyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\slshape\color{graytext} #1}}
-\newcommand*{\entrydateredstyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\slshape\color{awesome} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\slshape\color{graytext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\slshape\color{awesome} #1}}
+\newcommand*{\entrydateblackstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\slshape\color{graytext} #1}}
+\newcommand*{\entrydateredstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\slshape\color{awesome} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\upshape\color{text} #1}}
 
 % For elements of publications
@@ -407,7 +407,7 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{1mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{0mm}
+\newcommand{\acvSectionTopSkip}{-2.0mm}
 \newcommand{\acvSectionContentTopSkip}{2.0mm}
 
 
@@ -609,7 +609,7 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventryfour}[4]{%
-  \vspace{-2.0mm}
+  \vspace{-2.5mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.0cm} R{4.0cm}}
@@ -623,7 +623,7 @@
 }
 
 \newcommand*{\cventry}[5]{%
-  \vspace{-2.0mm}
+  \vspace{-2.5mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.0cm} R{4.0cm}}
@@ -655,6 +655,7 @@
   \begin{center}\begin{itemize}[leftmargin=2ex, nosep, noitemsep]
     }{%
   \end{itemize}\end{center}
+  \vspace{3.0mm}
 }
 
 % Define a line of cv information(publication) as a item
@@ -730,7 +731,7 @@
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
   \begin{justify}
-    \begin{itemize}[leftmargin=2ex, nosep, itemsep=0.5mm]
+    \begin{itemize}[leftmargin=2ex, nosep, itemsep=1mm]
       \setlength{\parskip}{0pt}
       \renewcommand{\labelitemi}{\bullet}
       }{%

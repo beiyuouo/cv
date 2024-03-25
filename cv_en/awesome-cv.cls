@@ -219,11 +219,11 @@
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\upshape\color{text} #1}}
 
 % For elements of publications
-\newcommand*{\pubstitlestyle}[1]{{\fontsize{9.5pt}{0.5em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\pubsauthorstyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\scshape\color{text} #1}}
-\newcommand*{\pubsjournalstyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\bfseries\color{graytext} #1}}
-\newcommand*{\pubsdatestyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\scshape\color{text} #1}}
-\newcommand*{\pubsdescstyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\scshape\color{awesome} #1}}
+\newcommand*{\pubstitlestyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\pubsauthorstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\pubsjournalstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\bfseries\color{graytext} #1}}
+\newcommand*{\pubsdatestyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\pubsdescstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\scshape\color{awesome} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{0.5em}\bodyfont\mdseries\color{graytext} #1}}
@@ -233,10 +233,10 @@
 \newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{0.5em}\bodyfont\upshape\color{text} #1}}
 
 % For elements of honor
-\newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorpositionstyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\honordatestyle}[1]{{\fontsize{9pt}{0.5em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorlocationstyle}[1]{{\fontsize{9pt}{0.5em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\honortitlestyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honorpositionstyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\honordatestyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honorlocationstyle}[1]{{\fontsize{8pt}{0.2em}\bodyfontlight\slshape\color{awesome} #1}}
 
 % For elements of skill
 \newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{0.5em}\bodyfont\bfseries\color{darktext} #1}}
@@ -612,7 +612,7 @@
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.0cm} R{4.0cm}}
     \ifempty{#2#3}
     {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
@@ -626,7 +626,7 @@
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.0cm} R{4.0cm}}
     \ifempty{#2#3}
     {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
@@ -638,7 +638,7 @@
 % Define an environment for cvproject
 % Usage: \cvproject{<title>}{<link>}{<star>}{<date>}{<description>}
 \newcommand*{\cvproject}[5]{%
-  \vspace{-2.0mm}
+  \vspace{-3.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 6.5cm} R{6.5cm}}
@@ -652,7 +652,7 @@
 \newenvironment{cvpublications}{%
   \vspace{\acvSectionContentTopSkip}
   \vspace{-5.0mm}
-  \begin{center}\begin{itemize}[leftmargin=2ex, itemsep=-3.0pt, topsep=0pt]
+  \begin{center}\begin{itemize}[leftmargin=2ex, nosep, noitemsep]
     }{%
   \end{itemize}\end{center}
 }
@@ -662,7 +662,7 @@
 \newcommand*{\cvpublication}[5]{%
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \item {\pubstitlestyle{#1.} \\\pubsauthorstyle{#2.} \ifempty{#4}{}{\pubsdatestyle{(#4).} }\textit{\pubsjournalstyle{#3.}}\ifempty{#5}{}{ \pubsdescstyle{#5}}}
+  \item {\pubstitlestyle{#1.} \par \pubsauthorstyle{#2.} \ifempty{#4}{}{\pubsdatestyle{(#4).} }\textit{\pubsjournalstyle{#3.}}\ifempty{#5}{}{ \pubsdescstyle{#5}}}
 }
 
 
@@ -730,7 +730,7 @@
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
   \begin{justify}
-    \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+    \begin{itemize}[leftmargin=2ex, nosep, itemsep=0.5mm]
       \setlength{\parskip}{0pt}
       \renewcommand{\labelitemi}{\bullet}
       }{%

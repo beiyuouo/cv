@@ -165,26 +165,31 @@
 % Set font for header (default is Roboto)
 \newfontfamily\headerfont[
   Path=\@fontdir,
-  UprightFont=*-Regular.otf,
-  ItalicFont=*-Regular.otf,
-  BoldFont=*-Bold.otf,
-  BoldItalicFont=*-Bold.otf,
+  UprightFont=*-Regular,
+  ItalicFont=*-Regular,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-Bold,
+  SmallCapsFont=*-Regular,
+  Extension=.otf,
 ]{SourceHanSerifSC}
 
 \newfontfamily\headerfontlight[
   Path=\@fontdir,
-  UprightFont=*-Light.otf,
-  ItalicFont=*-Light.otf,
-  BoldFont=*-Medium.otf,
-  BoldItalicFont=*-Bold.otf,
+  UprightFont=*-Light,
+  ItalicFont=*-Light,
+  BoldFont=*-Medium,
+  BoldItalicFont=*-Bold,
+  SmallCapsFont=*-Regular,
+  Extension=.otf,
 ]{SourceHanSerifSC}
 
 \newfontfamily\specialbold[
   Path=\@fontdir,
-  UprightFont=*-Bold.otf,
-  ItalicFont=*-Bold.otf,
-  BoldFont=*-Bold.otf,
-  BoldItalicFont=*-Bold.otf,
+  UprightFont=*-Bold,
+  ItalicFont=*-Bold,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-Bold,
+  Extension=.otf,
 ]{SourceHanSansSC}
 
 \newcommand{\mtextbf}[1]{{\specialbold #1}}

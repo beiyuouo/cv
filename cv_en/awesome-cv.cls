@@ -216,7 +216,7 @@
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\slshape\color{awesome} #1}}
 \newcommand*{\entrydateblackstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\slshape\color{graytext} #1}}
 \newcommand*{\entrydateredstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\slshape\color{awesome} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\upshape\color{text} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1.1em}\bodyfont\upshape\color{text} #1}}
 
 % For elements of publications
 \newcommand*{\pubstitlestyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
@@ -226,21 +226,21 @@
 \newcommand*{\pubsdescstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\scshape\color{awesome} #1}}
 
 % For elements of subentry
-\newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{0.5em}\bodyfont\mdseries\color{graytext} #1}}
-\newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{0.5em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\subentrydatestyle}[1]{{\fontsize{7pt}{0.5em}\bodyfont\slshape\color{graytext} #1}}
-\newcommand*{\subentrylocationstyle}[1]{{\fontsize{7pt}{0.5em}\bodyfont\slshape\color{awesome} #1}}
-\newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{0.5em}\bodyfont\upshape\color{text} #1}}
+\newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\mdseries\color{graytext} #1}}
+\newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{0.2em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\subentrydatestyle}[1]{{\fontsize{7pt}{0.2em}\bodyfont\slshape\color{graytext} #1}}
+\newcommand*{\subentrylocationstyle}[1]{{\fontsize{7pt}{0.2em}\bodyfont\slshape\color{awesome} #1}}
+\newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\upshape\color{text} #1}}
 
 % For elements of honor
-\newcommand*{\honortitlestyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\color{graytext} #1}}
 \newcommand*{\honorpositionstyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\honordatestyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorlocationstyle}[1]{{\fontsize{8pt}{0.2em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\honordatestyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honorlocationstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfontlight\slshape\color{awesome} #1}}
 
 % For elements of skill
-\newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{0.5em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{0.5em}\bodyfontlight\color{text} #1}}
+\newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfontlight\color{text} #1}}
 
 % For elements of the cover letter
 \newcommand*{\lettersectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@ #1}}
@@ -652,7 +652,8 @@
 \newenvironment{cvpublications}{%
   \vspace{\acvSectionContentTopSkip}
   \vspace{-5.0mm}
-  \begin{center}\begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+  \begin{center}\begin{itemize}[leftmargin=2ex, noitemsep]
+    \setlength{\parskip}{0pt}
     }{%
   \end{itemize}\end{center}
   \vspace{3.0mm}
@@ -694,11 +695,11 @@
 % Define an environment for cvhonor
 \newenvironment{cvhonors}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2mm}
+  \vspace{-2.0mm}
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 4.3cm} R{2.8cm}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{0.8cm} L{\textwidth - 3.0cm} R{2.0cm}}
       }{%
     \end{tabular*}
   \end{center}
@@ -731,9 +732,9 @@
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
   \begin{justify}
-    \begin{itemize}[leftmargin=2ex, itemsep=1mm, before=\vspace{0.2em}]
+    \begin{itemize}[leftmargin=2ex, noitemsep]
       \setlength{\parskip}{0pt}
-      \renewcommand{\labelitemi}{\bullet}
+      % \renewcommand{\labelitemi}{\bullet}
       }{%
     \end{itemize}
   \end{justify}

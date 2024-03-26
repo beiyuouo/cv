@@ -646,6 +646,7 @@
     {\entrytitlestyle{\href{#2}{#1~\large\faGithub~\small(\faStar#3)}} & \entrydateredstyle{#4} \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
+  \vspace{-1.0mm}
 }
 
 % Define an environment for cvpubliations

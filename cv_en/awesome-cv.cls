@@ -212,7 +212,7 @@
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{12pt}{0.5em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{11pt}{0.5em}\bodyfont\scshape\textcolor{text}{#1}}}
-\newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
+\newcommand*{\paragraphstyle}{\fontsize{9pt}{1.1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
@@ -579,7 +579,7 @@
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
   \vspace{\acvSectionTopSkip}
-  \needspace{3\baselineskip}
+  % \needspace{3\baselineskip}
   \sectionstyle{#1}
   \phantomsection
   \color{gray}\vhrulefill{0.9pt}
@@ -617,7 +617,7 @@
   \vspace{-2.5mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.0cm} R{4.0cm}}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 3.0cm} R{3.0cm}}
     \ifempty{#2#3}
     {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
@@ -631,7 +631,7 @@
   \vspace{-2.5mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.0cm} R{4.0cm}}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 3.0cm} R{3.0cm}}
     \ifempty{#2#3}
     {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
@@ -670,7 +670,7 @@
 \newcommand*{\cvpublication}[5]{%
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \item {\pubstitlestyle{#1.} \par \pubsauthorstyle{#2.} \ifempty{#4}{}{\pubsdatestyle{(#4).} }\textit{\pubsjournalstyle{#3.}}\ifempty{#5}{}{ \pubsdescstyle{#5}}}
+  \item {\pubstitlestyle{#1.} \pubsauthorstyle{#2.} \ifempty{#4}{}{\pubsdatestyle{(#4).} }\textit{\pubsjournalstyle{#3.}}\ifempty{#5}{}{ \pubsdescstyle{#5}}}
 }
 
 

@@ -412,7 +412,7 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{1mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{-2.5mm}
+\newcommand{\acvSectionTopSkip}{-2.0mm}
 \newcommand{\acvSectionContentTopSkip}{2.0mm}
 
 
@@ -597,7 +597,7 @@
 % Define a paragraph for CV
 \newenvironment{cvparagraph}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-3mm}
+  \vspace{-3.5mm}
   \paragraphstyle
 }{%
   \par

@@ -671,7 +671,7 @@
 \newcommand*{\cvpublication}[5]{%
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \item {\pubstitlestyle{#1.} \pubsauthorstyle{#2.} \ifempty{#4}{}{\pubsdatestyle{(#4).} }\ifempty{#3}{}{\textit{\pubsjournalstyle{#3.}} }\ifempty{#5}{}{ \pubsdescstyle{#5}}}
+  \item {\pubstitlestyle{#1.} \pubsauthorstyle{#2.} \ifempty{#4}{}{\pubsdatestyle{(#4).} }\ifempty{#3}{}{\textit{\pubsjournalstyle{#3.}} }\ifempty{#5}{}{\pubsdescstyle{#5}}}
 }
 
 

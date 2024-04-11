@@ -215,12 +215,12 @@
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1.1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\slshape\color{graytext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\slshape\color{awesome} #1}}
-\newcommand*{\entrydateblackstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\slshape\color{graytext} #1}}
-\newcommand*{\entrydateredstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\slshape\color{awesome} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{0.1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{0.1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{0.1em}\bodyfont\slshape\color{graytext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{0.1em}\bodyfont\slshape\color{awesome} #1}}
+\newcommand*{\entrydateblackstyle}[1]{{\fontsize{9pt}{0.1em}\bodyfont\slshape\color{graytext} #1}}
+\newcommand*{\entrydateredstyle}[1]{{\fontsize{9pt}{0.1em}\bodyfont\slshape\color{awesome} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1.1em}\bodyfont\upshape\color{text} #1}}
 
 % For elements of publications
@@ -412,7 +412,7 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{1mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{-2.0mm}
+\newcommand{\acvSectionTopSkip}{-2.5mm}
 \newcommand{\acvSectionContentTopSkip}{2.0mm}
 
 
@@ -628,7 +628,7 @@
 }
 
 \newcommand*{\cventry}[5]{%
-  \vspace{-2.5mm}
+  \vspace{-3.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 3.0cm} R{3.0cm}}
@@ -638,6 +638,7 @@
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
+  \vspace{-1.0mm}
 }
 
 % Define an environment for cvproject
@@ -670,7 +671,7 @@
 \newcommand*{\cvpublication}[5]{%
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \item {\pubstitlestyle{#1.} \pubsauthorstyle{#2.} \ifempty{#4}{}{\pubsdatestyle{(#4).} }\textit{\pubsjournalstyle{#3.}}\ifempty{#5}{}{ \pubsdescstyle{#5}}}
+  \item {\pubstitlestyle{#1.} \pubsauthorstyle{#2.} \ifempty{#4}{}{\pubsdatestyle{(#4).} }\ifempty{#3}{}{\textit{\pubsjournalstyle{#3.}} }\ifempty{#5}{}{ \pubsdescstyle{#5}}}
 }
 
 

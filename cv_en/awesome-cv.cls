@@ -81,6 +81,7 @@
 \RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
+\RequirePackage{booktabs}
 % Needed to deal hyperlink
 \RequirePackage[hidelinks,unicode]{hyperref}
 \hypersetup{%
@@ -632,13 +633,14 @@
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 3.0cm} R{3.0cm}}
+    % \specialrule{0em}{-0.2mm}{-0.2mm}
     \ifempty{#2#3}
     {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
-  \vspace{-1.0mm}
+  \vspace{-1.5mm}
 }
 
 % Define an environment for cvproject
@@ -663,7 +665,7 @@
     \setlength{\parskip}{0pt}
     }{%
   \end{itemize}\end{center}
-  \vspace{3.0mm}
+  \vspace{2.0mm}
 }
 
 % Define a line of cv information(publication) as a item

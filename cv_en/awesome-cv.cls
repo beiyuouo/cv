@@ -92,6 +92,17 @@
 }
 
 
+% \RequirePackage[T1]{fontenc} 
+% \RequirePackage[tt=false, type1=true]{libertine} 
+% \RequirePackage[varqu]{zi4} 
+% \RequirePackage[libertine]{newtxmath}
+
+\RequirePackage[T1]{fontenc} 
+\RequirePackage[tt=false]{libertine} 
+\setmonofont{inconsolata} 
+\RequirePackage[varqu]{zi4} 
+% \RequirePackage[libertine]{newtxmath}
+
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
 %-------------------------------------------------------------------------------
@@ -164,37 +175,17 @@
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
 % Set font for header (default is Roboto)
-\newfontfamily\headerfont[
-  Path=\@fontdir,
-  UprightFont=*-Regular,
-  ItalicFont=*-Regular,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-Bold,
-  % SmallCapsFont=*-Regular,
-  Extension=.otf,
-]{SourceHanSerifSC}
 
-\newfontfamily\headerfontlight[
-  Path=\@fontdir,
-  UprightFont=*-Light,
-  ItalicFont=*-Light,
-  BoldFont=*-Medium,
-  BoldItalicFont=*-Bold,
-  % SmallCapsFont=*-Regular,
-  Extension=.otf,
-]{SourceHanSerifSC}
 
-\newfontfamily\specialbold[
-  Path=\@fontdir,
-  UprightFont=*-Bold,
-  ItalicFont=*-Bold,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-Bold,
-  Extension=.otf,
-]{SourceHanSansSC}
 
 \newcommand{\mtextbf}[1]{{\specialbold #1}}
 
+\setmainfont{Libertinus Serif}  
+% \setsansfont{Libertinus Sans}  
+% \setmonofont{Libertinus Mono}  
+  
+\newfontfamily\headerfont{Libertinus Serif}
+\newfontfamily\headerfontlight{Libertinus Serif Display Regular}
 \newcommand*{\footerfont}{\headerfont}
 \newcommand*{\bodyfont}{\headerfont}
 \newcommand*{\bodyfontlight}{\headerfontlight}
@@ -206,51 +197,51 @@
 % For fundamental structures
 \newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{gray} #1}}
 \newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{darktext} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\headerfont\scshape\color{awesome} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\headerfont\color{awesome} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
-\newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
-\newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{12pt}{0.5em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{11pt}{0.5em}\bodyfont\scshape\textcolor{text}{#1}}}
-\newcommand*{\paragraphstyle}{\fontsize{9pt}{1.1em}\bodyfontlight\upshape\color{text}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{text} #1}}
+\newcommand*{\headerquotestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\itshape\color{darktext} #1}}
+\newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\color{lighttext} #1}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{13pt}{0.5em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{0.5em}\bodyfont\textcolor{text}{#1}}}
+\newcommand*{\paragraphstyle}{\fontsize{10pt}{1.1em}\bodyfont\upshape\color{text}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{0.1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{0.1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{0.1em}\bodyfont\slshape\color{graytext} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{0.1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{10pt}{0.1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{9pt}{0.1em}\bodyfont\slshape\color{graytext} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{0.1em}\bodyfont\slshape\color{awesome} #1}}
 \newcommand*{\entrydateblackstyle}[1]{{\fontsize{9pt}{0.1em}\bodyfont\slshape\color{graytext} #1}}
 \newcommand*{\entrydateredstyle}[1]{{\fontsize{9pt}{0.1em}\bodyfont\slshape\color{awesome} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1.1em}\bodyfont\upshape\color{text} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1.1em}\bodyfont\upshape\color{text} #1}}
 
 % For elements of publications
-\newcommand*{\pubstitlestyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\pubsauthorstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\scshape\color{text} #1}}
-\newcommand*{\pubsjournalstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\bfseries\color{graytext} #1}}
-\newcommand*{\pubsdatestyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\scshape\color{text} #1}}
-\newcommand*{\pubsdescstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\scshape\color{awesome} #1}}
+\newcommand*{\pubstitlestyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\pubsauthorstyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\color{text} #1}}
+\newcommand*{\pubsjournalstyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\bfseries\color{graytext} #1}}
+\newcommand*{\pubsdatestyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\color{text} #1}}
+\newcommand*{\pubsdescstyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\color{awesome} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\mdseries\color{graytext} #1}}
-\newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{0.2em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{0.2em}\bodyfont\color{graytext} #1}}
 \newcommand*{\subentrydatestyle}[1]{{\fontsize{7pt}{0.2em}\bodyfont\slshape\color{graytext} #1}}
 \newcommand*{\subentrylocationstyle}[1]{{\fontsize{7pt}{0.2em}\bodyfont\slshape\color{awesome} #1}}
 \newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\upshape\color{text} #1}}
 
 % For elements of honor
-\newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorpositionstyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\honordatestyle}[1]{{\fontsize{9pt}{0.2em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorlocationstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\honortitlestyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honorpositionstyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\honordatestyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\slshape\color{graytext} #1}}
+\newcommand*{\honorlocationstyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\slshape\color{awesome} #1}}
 
 % For elements of skill
 \newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{0.2em}\bodyfontlight\color{text} #1}}
+\newcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\color{text} #1}}
 
 % For elements of the cover letter
 \newcommand*{\lettersectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@ #1}}
-\newcommand*{\recipientaddressstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\recipientaddressstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
 \newcommand*{\recipienttitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\lettertitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\bfseries\color{darktext} \underline{#1}}}
 \newcommand*{\letterdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
@@ -654,25 +645,31 @@
     {\entrytitlestyle{\href{#2}{#1~\large\faGithub~\small(\faStar#3)}} & \entrydateredstyle{#4} \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
-  \vspace{-1.0mm}
+  \vspace{-2.0mm}
 }
+
+% \newlist{counteditemize}{itemize}{1}  
+% \setlist[counteditemize,1]{label=\arabic*.,align=left}  
 
 % Define an environment for cvpubliations
 \newenvironment{cvpublications}{%
   \vspace{\acvSectionContentTopSkip}
   \vspace{-5.0mm}
-  \begin{center}\begin{itemize}[leftmargin=2ex, noitemsep]
-    \setlength{\parskip}{0pt}
-    }{%
-  \end{itemize}\end{center}
+  \begin{justify}
+    \begin{itemize}[leftmargin=2ex, noitemsep, label=-, align=left]
+      \setlength{\parskip}{0pt}
+      % \renewcommand{\labelitemi}{\bullet}
+      }{%
+    \end{itemize}
+  \end{justify}
   \vspace{2.0mm}
 }
 
 % Define a line of cv information(publication) as a item
 % Usage: \cvpublication{<title>}{<authors>}{<journal>}{<date>}{<description>}
 \newcommand*{\cvpublication}[5]{%
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
+  % \setlength\tabcolsep{0pt}
+  % \setlength{\extrarowheight}{0pt}
   \item {\pubstitlestyle{#1.} \pubsauthorstyle{#2.} \ifempty{#4}{}{\pubsdatestyle{(#4).} }\ifempty{#3}{}{\textit{\pubsjournalstyle{#3.}} }\ifempty{#5}{}{\pubsdescstyle{#5}}}
 }
 
@@ -727,7 +724,7 @@
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.8}}}
       }{%
     \end{tabular*}
   \end{center}
@@ -745,7 +742,7 @@
   \begin{justify}
     \begin{itemize}[leftmargin=2ex, noitemsep]
       \setlength{\parskip}{0pt}
-      % \renewcommand{\labelitemi}{\bullet}
+      \renewcommand{\labelitemi}{\bullet}
       }{%
     \end{itemize}
   \end{justify}

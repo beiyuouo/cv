@@ -202,8 +202,8 @@
 \newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{13pt}{0.5em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{0.5em}\bodyfont\textcolor{text}{#1}}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{14pt}{0.5em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{10pt}{1.1em}\bodyfont\upshape\color{text}}
 
 % For elements of entry
@@ -216,11 +216,11 @@
 \newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1.1em}\bodyfont\upshape\color{text} #1}}
 
 % For elements of publications
-\newcommand*{\pubstitlestyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\pubsauthorstyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\color{text} #1}}
-\newcommand*{\pubsjournalstyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\bfseries\color{graytext} #1}}
-\newcommand*{\pubsdatestyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\color{text} #1}}
-\newcommand*{\pubsdescstyle}[1]{{\fontsize{10pt}{0.2em}\bodyfont\color{awesome} #1}}
+\newcommand*{\pubstitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\pubsauthorstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{text} #1}}
+\newcommand*{\pubsjournalstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{graytext} #1}}
+\newcommand*{\pubsdatestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{text} #1}}
+\newcommand*{\pubsdescstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{awesome} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{0.2em}\bodyfont\mdseries\color{graytext} #1}}
@@ -404,7 +404,7 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{1mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{-2.0mm}
+\newcommand{\acvSectionTopSkip}{-1.0mm}
 \newcommand{\acvSectionContentTopSkip}{2.0mm}
 
 
@@ -581,9 +581,10 @@
 % Usage: \cvsubsection{<subsection-title>}
 \newcommand{\cvsubsection}[1]{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-3mm}
+  \vspace{-4.5mm}
   \subsectionstyle{#1}
   \phantomsection
+  \vspace{-1mm}
 }
 
 % Define a paragraph for CV
@@ -654,9 +655,9 @@
 % Define an environment for cvpubliations
 \newenvironment{cvpublications}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-5.0mm}
+  \vspace{-2.0mm}
   \begin{justify}
-    \begin{itemize}[leftmargin=2ex, noitemsep, label=-, align=left]
+    \begin{itemize}[leftmargin=2ex, itemsep=0.5mm, align=left]
       \setlength{\parskip}{0pt}
       % \renewcommand{\labelitemi}{\bullet}
       }{%

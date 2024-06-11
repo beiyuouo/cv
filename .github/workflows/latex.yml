@@ -30,7 +30,7 @@ jobs:
             cv_cn/cv_cn.tex
           work_in_root_file_dir: true
           latexmk_use_xelatex: true
-          texlive_version: 2024
+          texlive_version: 2023
 
       - name: Setup repository
         run: |

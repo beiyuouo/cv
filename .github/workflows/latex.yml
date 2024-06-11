@@ -23,13 +23,14 @@ jobs:
           ssh-key: ${{ secrets.PUBLISH_KEY }}
 
       - name: Compile CV
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: |
             cv_en/cv_en.tex
             cv_cn/cv_cn.tex
           work_in_root_file_dir: true
           latexmk_use_xelatex: true
+          texlive_version: 2024
 
       - name: Setup repository
         run: |

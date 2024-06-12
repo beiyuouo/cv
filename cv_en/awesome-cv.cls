@@ -203,7 +203,7 @@
 \newcommand*{\headerquotestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{14pt}{0.5em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\textcolor{text}{#1}}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{10.5pt}{1em}\bodyfont\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{10pt}{1.1em}\bodyfont\upshape\color{text}}
 
 % For elements of entry
@@ -581,10 +581,10 @@
 % Usage: \cvsubsection{<subsection-title>}
 \newcommand{\cvsubsection}[1]{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-4.5mm}
+  \vspace{-5.5mm}
   \subsectionstyle{#1}
   \phantomsection
-  \vspace{-1mm}
+  \vspace{-2mm}
 }
 
 % Define a paragraph for CV

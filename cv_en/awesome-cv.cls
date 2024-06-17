@@ -668,10 +668,11 @@
 
 % Define a line of cv information(publication) as a item
 % Usage: \cvpublication{<title>}{<authors>}{<journal>}{<date>}{<description>}
-\newcommand*{\cvpublication}[5]{%
+\newcommand*{\cvpublication}[6]{%
   % \setlength\tabcolsep{0pt}
   % \setlength{\extrarowheight}{0pt}
-  \item {\pubstitlestyle{#1.} \pubsauthorstyle{#2.} \ifempty{#4}{}{\pubsdatestyle{(#4).} }\ifempty{#3}{}{\textit{\pubsjournalstyle{#3.}} }\ifempty{#5}{}{\pubsdescstyle{#5}}}
+  % \item {\pubsauthorstyle{#2.}\pubstitlestyle{''#1''. }\ifempty{#3}{}{\textit{\pubsjournalstyle{#3 }}\ifempty{#4}{}{\pubsdatestyle{(#4).} }}\ifempty{#5}{}{\pubsjournalstyle{#5.} }\ifempty{#6}{}{\pubsdescstyle{#6}}}
+  \item {\pubsauthorstyle{#2.}\pubstitlestyle{''#1''. }\ifempty{#3}{}{\textit{\pubsjournalstyle{#3 }}}\ifempty{#5}{}{\pubsjournalstyle{#5.} }\ifempty{#6}{}{\pubsdescstyle{#6}}}
 }
 
 

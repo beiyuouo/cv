@@ -657,9 +657,10 @@
   \vspace{\acvSectionContentTopSkip}
   \vspace{-2.0mm}
   \begin{justify}
-    \begin{itemize}[leftmargin=2ex, itemsep=0.5mm, align=left]
+    % \begin{itemize}[leftmargin=2ex, itemsep=0.5mm, align=left]
+    \begin{itemize}[leftmargin=2ex, noitemsep]
       \setlength{\parskip}{0pt}
-      % \renewcommand{\labelitemi}{\bullet}
+      \renewcommand{\labelitemi}{\bullet}
       }{%
     \end{itemize}
   \end{justify}
@@ -672,7 +673,7 @@
   % \setlength\tabcolsep{0pt}
   % \setlength{\extrarowheight}{0pt}
   % \item {\pubsauthorstyle{#2.}\pubstitlestyle{''#1''. }\ifempty{#3}{}{\textit{\pubsjournalstyle{#3 }}\ifempty{#4}{}{\pubsdatestyle{(#4).} }}\ifempty{#5}{}{\pubsjournalstyle{#5.} }\ifempty{#6}{}{\pubsdescstyle{#6}}}
-  \item {\pubsauthorstyle{#2.}\pubstitlestyle{''#1''. }\ifempty{#3}{}{\textit{\pubsjournalstyle{#3 }}}\ifempty{#5}{}{\pubsjournalstyle{#5.} }\ifempty{#6}{}{\pubsdescstyle{#6}}}
+  \item {\pubsauthorstyle{#2. }\pubstitlestyle{''#1''. }\ifempty{#3}{}{\textit{\pubsjournalstyle{#3 }}}\ifempty{#5}{}{\pubsjournalstyle{#5.} }\ifempty{#6}{}{\pubsdescstyle{#6}}}
 }
 
 

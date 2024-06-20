@@ -653,29 +653,28 @@
 % \setlist[counteditemize,1]{label=\arabic*.,align=left}  
 
 % Define an environment for cvpubliations
+\newcounter{pubcounter}
+
 \newenvironment{cvpublications}{%
   \vspace{\acvSectionContentTopSkip}
   \vspace{-2.0mm}
   \begin{justify}
-    % \begin{itemize}[leftmargin=2ex, itemsep=0.5mm, align=left]
-    \begin{itemize}[leftmargin=2ex, noitemsep]
-      \setlength{\parskip}{0pt}
-      \renewcommand{\labelitemi}{\bullet}
-      }{%
-    \end{itemize}
+  \begin{enumerate}[leftmargin=4ex, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelenumi}{\pubsauthorstyle{[\arabic{pubcounter}]}}
+    }{%
+  \end{enumerate}
   \end{justify}
   \vspace{2.0mm}
 }
 
+
 % Define a line of cv information(publication) as a item
 % Usage: \cvpublication{<title>}{<authors>}{<journal>}{<date>}{<description>}
 \newcommand*{\cvpublication}[6]{%
-  % \setlength\tabcolsep{0pt}
-  % \setlength{\extrarowheight}{0pt}
-  % \item {\pubsauthorstyle{#2.}\pubstitlestyle{''#1''. }\ifempty{#3}{}{\textit{\pubsjournalstyle{#3 }}\ifempty{#4}{}{\pubsdatestyle{(#4).} }}\ifempty{#5}{}{\pubsjournalstyle{#5.} }\ifempty{#6}{}{\pubsdescstyle{#6}}}
+  \stepcounter{pubcounter}
   \item {\pubsauthorstyle{#2. }\pubstitlestyle{''#1''. }\ifempty{#3}{}{\textit{\pubsjournalstyle{#3 }}}\ifempty{#5}{}{\pubsjournalstyle{#5.} }\ifempty{#6}{}{\pubsdescstyle{#6}}}
 }
-
 
 % Define an environment for cvsubentry
 \newenvironment{cvsubentries}{%
